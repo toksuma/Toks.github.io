@@ -1,0 +1,161 @@
+---
+---
+Development
+===========
+
+== The Source Code
+
+The LEDE project source code starts off with OpenWrt revision r49258. The code
+is stored inside a git tree which contains all branches and releases ever made
+by OpenWrt. While importing the sources the tree was normalised and some
+minor tweaks were made to committer names and mail addresses.
+
+All repositories can be browsed online through
+https://git.lede-project.org/[Gitweb] as well.
+
+=== Getting The _LEDE_ Code
+
+Any _LEDE_ development happens in the main +source.git+ repository which is
+accessible via both HTTP and HTTPS:
+
+----
+git clone https://git.lede-project.org/source.git
+----
+
+You can find a mirror of the repository on Github:
+
+----
+git clone https://github.com/lede-project/source.git
+----
+
+=== Getting the OpenWrt Code
+
+We keep the original OpenWrt source code up to
+https://git.lede-project.org/?p=openwrt/source.git;a=commit;h=ee53a240ac902dc83209008a2671e7fdcf55957a[r49258]
+available, mostly as reference and for historic interest.
+
+The original OpenWrt Subversion repository has been split up into several Git
+repositories mapping the various SVN directories and tags to proper Git
+branches.
+
+----
+git clone https://git.lede-project.org/openwrt/source.git
+git clone https://git.lede-project.org/openwrt/packages.git
+git clone https://git.lede-project.org/openwrt/feeds.git
+git clone https://git.lede-project.org/openwrt/docs.git
+----
+
+=== The Web Presence
+
+The pages you're reading are generated from text files using the
+http://www.methods.co.nz/asciidoc/[AsciiDoc] suite. Any changes made to the
+projects web site will be reflected in our +web.git+ repository:
+
+----
+git clone https://git.lede-project.org/web.git
+----
+
+=== Submitting Patches
+
+The biggest difference is that we now accept pull requests. Patches can be submitted as either a pull request on Github or small fixes and minor patches can also be submitted via the mailing list. Submissions should follow these rules:
+
+. A `Signed-off-by` line must be added to your commit / patch in accordance with Section 1.11 of the https://www.kernel.org/doc/Documentation/SubmittingPatches[Linux Kernel patches guide].
+.. Git: `git commit --signoff`
+.. Email: Just add line like `Signed-off-by: Random J Developer <random@developer.example.org>` to the top patch.
+. TBD
+
+==== Github
+
+There are Github mirrors of the https://github.com/lede-project/source[source] and https://github.com/lede-project/web[web] repos. Simply fork the project to a public repo using Github web interface, clone the repo to your computer, create a branch for your changes, push these back to Github and submit a pull request.
+
+For example, to submit a pull request for these web-pages, follow these instructions and then submit PR using Github web interface:
+----
+git clone git@github.com:<github username>/web.git
+git checkout -b <branch-name>
+<make changes to files>
+git commit --signoff
+git push --all
+----
+
+==== Email
+
+Send an email to the https://lists.infradead.org/mailman/listinfo/lede-dev[development mailing list]. All patches need to be sent in the same format as those that are listed on https://patchwork.ozlabs.org/project/lede/list/[patchwork]. If the patch does not get listed in patchwork then it won't get processed. For example, to print a patch for the most recent commit, `git format-patch -1 --stdout`. Double check that your output conforms before sending.
+
+=== Staging Trees
+
+To create yourself a staging tree on git.lede-project.org:
+----
+ssh git@git.lede-project.org "create lede/yournick/staging"
+ssh git@git.lede-project.org "desc lede/yournick/staging Staging tree of Your Name"
+----
+
+
+=== Reporting Bugs
+
+. Please report your bugs using our https://bugs.lede-project.org/[issue tracker]
+. When reporting bugs please make sure to
+  .. Name the tree/revision
+  .. Name the affected device
+  .. What does it do that it should not do / what does it not do that it should do
+  .. Steps to reproduce
+  .. What you have already done to fix the problem
+  .. Any additional info you thinks is important
+. Reporting a bug means that you reported a bug. It does not constitute a claim that
+  anyone has to work on fixing it.
+. Pointless/vague/silly/... bugs reports will be ignored
+. The better your bug report, the more likely it is that it will be worked on.
+
+
+=== Patch Merging And Tree Life Cycle
+
+We encourage committers to host their own staging trees where they aggregate patches
+that they feel responsible for and/or ones that they created themselves. Once the tree
+has been reviewed and tested it can be proposed for inclusion in the master branch.
+
+. Trees will be merged into master at any time
+. Bug fixes can be merged into master directly
+. PRs can be sent to the patches mailing list from any source and will always be considered
+  for inclusion if the quality of the tree is good and format of submission is correct
+. Staging trees can be hosted as part of the projects git infrastucture, private servers, ...
+
+=== Kernel updates
+
+It has proven impractical and a time killer to always be on the very latest kernel within
+2 days of its release. It has caused these issues.
+
+. diversification of kernel versions
+. pressure on maintainers to constantly upgrade rather than stabilise
+. huge effort invested to upgrade 3-4 times between releases
+. huge workload to maintain kmod-* packaging
+. Upgrade to kernels that might not be fully tested
+
+This is obviously not an invite to sit on ancient and dusty kernels. A sane path in between
+should be taken that give the community recent kernels without causing unnecessary workload
+and stability issues.
+
+There should be a max of three concurrent kernel version. Having only two concurrent versions
+is better than three.
+
+In Short - stability should be valued higher than bleeding edge, although bleeding edge is
+also important, but not as a trade-off to stability.
+
+
+=== Releases
+
+Generating Releases has already been vastly automated. The remaining parts of the process need
+to also be automated before the first _LEDE_ release. We will introduce a TESTERS file that is
+formatted similarly to the MAINTAINERS file of the kernel. Community members can list themselves
+as testers for a target/profile/device. Once a release has been generated testers should receive
+an email informing them of the requirement for images to be tested. It needs to be decided if only
+tested images should be included in the binary release.
+
+Releases should
+
+. Happen at least once a year
+. Have at least one maintenance update
+. Provide CVE/critical/... fixes for at least one year after the release
+. Only include maintained targets
+. Only include targets that have seen on device testing
+. Be ready when they are ready
+
+See the TODO page for more info.

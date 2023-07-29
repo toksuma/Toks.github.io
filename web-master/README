@@ -1,0 +1,35 @@
+This is the repository of the old LEDE web presence.
+
+The files in here mostly serve historical interest, the actual web
+presence is maintained in the wiki nowadays.
+
+--
+
+This is the repository of the LEDE web pages.
+
+All pages should follow these rules
+
+* written using asciidoc
+* changes are verified using aspell
+* changes to the rules.txt files are not allowed without a prior vote
+
+Top level pages are located in this directory while the "Documentation"
+can be found in the docs/ sub-folder.
+
+The _includes/ folder contains the html structure of the site navbars, 
+if you add a page please add it in the respective nav bar so that it 
+becomes reachable.
+
+The website is generated from asciidoc using jekyll invoked by a cron script
+every 15 minutes.
+
+If sources are updated to require new jekyll plugins or a changed configuration
+then tell someone with access to the web server so that the settings can be
+synchronized with those in the tree.
+
+In order to generate the pages locally for testing your changes,
+install https://jekyllrb.com/, issue "jekyll serve" and navigate to
+http://127.0.0.1:4000/ with your browser.
+
+LICENSE is TBD and should be placed in the LICENSE file once decided.
+

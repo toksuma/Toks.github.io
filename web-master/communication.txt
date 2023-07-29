@@ -1,0 +1,76 @@
+---
+---
+Project Communication
+=====================
+
+== Communication
+
+It is possible to communicate with other community members using mail and IRC.
+All project related communication should be done on public channels that are
+archived and easily browsable. Specific problems and tasks may be resolved
+using direct means of communication.
+
+
+=== Mailing Lists
+
+The project offers the following mailing lists
+
+. https://lists.infradead.org/mailman/listinfo/lede-dev[lede-dev@lists.infradead.org] -
+  This list is used for submitting patches and general development related work.
+. https://lists.infradead.org/mailman/listinfo/lede-adm[lede-adm@lists.infradead.org] - 
+  This list is used for project organisational purposes. Anyone can
+  subscribe and read this list, only committers may write to this list.
+
+In addition there are two read only announcement lists:
+
+. http://lists.infradead.org/mailman/listinfo/lede-bugs[lede-bugs@lists.infradead.org] -
+  This list receives bug tracking notifications from Flyspray.
+. http://lists.infradead.org/mailman/listinfo/lede-commits[lede-commits@lists.infradead.org] -
+  This list tracks the commits to our `source.git` and `web.git` repositories.
+
+
+=== IRC Channels
+
+The project provides 2 IRC channels on freenode
+
+. #lede-dev - a public channel for everyone to join and participate.
+. #lede-adm - a moderated channel that anyone can join but only people with +v flag can write on.
+
+
+=== Twitter
+
+In case of services going down, being moved or being unreachable for any other
+reason, please go to twitter and see what the status is. The project will do
+its best to post updates link:https://twitter.com/lede_project[here].
+
+
+=== Corporate Contact
+
+Please direct general inquiries to
+link:mailto:lede-contact@lede-project.org[lede-contact@lede-project.org] in order
+to confidentially get in touch with the link:about.html#people[project developers].
+
+Note that this contact is primarily intented to find a suitable mode of
+cooperation and to inquire about project matters without having to disclose
+your corporate identity upfront. There will be no special treatment beyond the
+"first contact". Please see the project link:rules.html[rules] for further
+information.
+
+Actual development should happen in public and corporations are strongly
+encouraged to send their contributions through the public mailing lists or in
+the form of Github pull requests.
+
+== Project Meetings
+
+We attempt to have regular IRC meetings to discuss and decide project matters.
+
+=== Next Meeting
+
+The next meeting date is yet to be decided.
+
+For the agenda of the upcoming meeting refer to the
+http://piratepad.net/ep/pad/view/ro.UdKV08dIlKx/latest[agenda pad].
+
+== Meeting Logs
+
+All meeting logs can be viewed under http://meetings.lede-project.org/lede-adm/[here].

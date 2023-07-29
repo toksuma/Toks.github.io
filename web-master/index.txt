@@ -1,0 +1,59 @@
+---
+---
+LEDE - Linux Embedded Development Environment
+=============================================
+
+== Welcome to the LEDE project
+
+The LEDE project is a Linux based embedded meta distribution based on OpenWrt
+and targeting a wide range of wireless SOHO routers and non-network devices.
+
+LEDE spun away from the mother project in May 2016, aims for an open governance
+model and attempts to simplify contributing to encourage new developers in
+embedded development.
+
+Refer to our link:about.html[about page] to learn more about the projects
+origins.
+
+=== How can I use LEDE?
+
+Since LEDE is a pretty young spinoff from OpenWrt it is largely compatible to
+it, in most cases the same installation procedures can be used to flash your
+devices.
+
+Sysupgrades from OpenWrt to LEDE or vice versa are supported but it is advised
+to not keep settings in such a case to benefit from the updated defaults.
+
+=== What is LEDE’s target audience?
+
+As a source based Linux distribution for wireless routers, LEDE is primarily
+intended for networking enthusiasts, wireless communities, embedded Linux
+developers and advanced users.
+
+LEDE aims for versatility and ease of customization but does not attempt to
+be a fully integrated alternative to OEM firmware, it rather is a set of
+building blocks to implement your own projects.
+
+=== How can I help?
+
+Like any open source project, LEDE lives from the effort being put into it by
+its users and developers. If you like to participate in development, please
+refer to our link:development.html[development sub page] to learn more about
+source code access and building instructions.
+
+If you do not consider yourself a developer but want to participate in
+maintaining documentation or in helping community members then don't hesitate
+to join our https://lists.infradead.org/mailman/listinfo/lede-dev[mailing list]
+or IRC channels to get in touch.
+
+=== Endorsement
+
+The *Wrt community is made up of many great communities all tinkering on their
+own mission in improving something on this planet. The Following communities have
+kindly decided to endorse this project. Thanks !
+
+- image:logo/endorsements/qmp.png[qMp logo] http://qmp.cat/News/31_qMp_endorses_the_LEDE_project["qMp endorses the LEDE project"]
+- image:logo/endorsements/wirelesspt.png[WirelessPT logo] https://wirelesspt.net/wiki/LEDE["\"We wish huge success to the LEDE project\""]
+- image:logo/endorsements/weimarnetz.png[Weimarnetz logo] https://weimarnetz.de/["Project Homepage"]
+- image:logo/endorsements/bmx7.png[bmx.net logo] http://bmx6.net/news/24["\"We ... will consider it the new default OS environment for embedded devices running bmx6 and bmx7\""]
+- image:logo/endorsements/libremesh.png[Libre-Mesh logo] http://libre-mesh.org/news.html#2016_08_06_endorsement_to_lede_project["\"We endorse the LEDE project and we plan to start basing Libre-Mesh releases on Linux Embedded Development Environment\""]
